@@ -1,0 +1,10 @@
+cd C:/Users/Meiliu/Documents/UW_Study_Work/2018Fall/CS564_Database/PP/PP1/ebay_data/
+
+***python TbParser_Modified_Meiliu.py ./ebay_data/items-*.json
+
+sh runParser.sh
+
+sqlite3 AuctionDB.db <create.sql
+sqlite3 AuctionDB.db <load.txt
+
+sqlite3 AuctionDB.db < query5.sql

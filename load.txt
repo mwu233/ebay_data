@@ -1,0 +1,13 @@
+.separator | 
+.import Table_item.dat Items 
+update Items 
+set Buy_Price = null where Buy_Price = 'NULL'; 
+update Items 
+set Description = null where Description = 'NULL'; -- Replace all token 'NULL' values with null 
+.import Table_user.dat AuctionUser
+update AuctionUser
+set Location = null where Location = 'NULL'; 
+update AuctionUser
+set Country = null where Country = 'NULL'; 
+.import Table_bid.dat Bid
+.import Table_category.dat Category
